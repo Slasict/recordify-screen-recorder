@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Referenced Files", "Referenced Files", "{F0494248-EE99-4EF5-9AF4-B31BE113B35D}"
 	ProjectSection(SolutionItems) = preProject
 		Referenced Files\Hardcodet.Wpf.TaskbarNotification.dll = Referenced Files\Hardcodet.Wpf.TaskbarNotification.dll
+		Referenced Files\Newtonsoft.Json.dll = Referenced Files\Newtonsoft.Json.dll
 		Referenced Files\Ookii.Dialogs.Wpf.dll = Referenced Files\Ookii.Dialogs.Wpf.dll
 		Referenced Files\System.Windows.Interactivity.dll = Referenced Files\System.Windows.Interactivity.dll
 		Referenced Files\Vlc.DotNet.Core.dll = Referenced Files\Vlc.DotNet.Core.dll
@@ -48,10 +49,10 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		BuildVersion_AssemblyInfoFilename = Common\AssemblyInfoCommon.cs
-		BuildVersion_UseGlobalSettings = False
-		BuildVersion_BuildVersioningStyle = None.None.None.None
 		BuildVersion_UpdateFileVersion = False
+		BuildVersion_BuildVersioningStyle = None.None.None.None
+		BuildVersion_UseGlobalSettings = False
+		BuildVersion_AssemblyInfoFilename = Common\AssemblyInfoCommon.cs
 	EndGlobalSection
 	GlobalSection(Performance) = preSolution
 		HasPerformanceSessions = true
