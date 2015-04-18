@@ -16,8 +16,10 @@ namespace RecordifyAppWin.Recorder
 
         public VLCRecorder()
         {
-            VlcContext.LibVlcDllsPath = @"RecorderLib/Vlc/";
-            VlcContext.LibVlcPluginsPath = @"RecorderLib/Vlc/plugins/";
+            // Use system VLC libs (if installed)
+            // Todo: Check if path exists
+            VlcContext.LibVlcDllsPath = CommonStrings.LIBVLC_DLLS_PATH_DEFAULT_VALUE_X86;
+            VlcContext.LibVlcPluginsPath = CommonStrings.PLUGINS_PATH_DEFAULT_VALUE_X86;
             VlcContext.StartupOptions.IgnoreConfig = true;
             VlcContext.StartupOptions.ShowLoggerConsole = false;
             VlcContext.StartupOptions.AddOption("--screen-fps=25");
