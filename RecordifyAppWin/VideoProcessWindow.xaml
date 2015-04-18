@@ -1,0 +1,39 @@
+﻿<Window x:Class="RecordifyAppWin.VideoProcessWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Style="{StaticResource BaseWindowStyle}"
+        Title="VideoProcessWindow" Height="290" Width="500" WindowStartupLocation="CenterScreen">
+    <Window.TaskbarItemInfo>
+        <TaskbarItemInfo ProgressValue="{Binding Model.CurrentProgressTaskbarValue, Mode=OneWay}" ProgressState="{Binding Model.TaskbarProgressState}" />
+    </Window.TaskbarItemInfo>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="{Binding Model.Header}" HorizontalAlignment="Center" FontSize="13" Margin="0,10" />
+        <WrapPanel Grid.Row="1" Orientation="Vertical" Margin="40,0">
+            <ItemsControl ItemsSource="{Binding Model.TodoList}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0" RenderOptions.BitmapScalingMode="HighQuality" Source="{Binding Icon}" Width="20" Height="20" />
+                            <Label Grid.Column="1" Content="{Binding Text}" />
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </WrapPanel>
+        <ProgressBar Grid.Row="2" HorizontalAlignment="Center" Height="30" Width="390" Margin="0,10" Value="{Binding Model.CurrentProgress, Mode=OneWay}" Foreground="{Binding Model.ProgressColor}" />
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+            <Button Content="Open record folder" Command="{Binding ProcessStartCommand}" CommandParameter="{Binding Model.RecordingInfo.Location}" Width="150" Height="30" />
+        </StackPanel>
+    </Grid>
+</Window>

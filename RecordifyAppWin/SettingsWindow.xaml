@@ -1,0 +1,70 @@
+﻿<Window x:Class="RecordifyAppWin.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Style="{StaticResource BaseWindowStyle}"
+        Title="Settings - Recordify" Width="348" Height="420" WindowStartupLocation="CenterScreen" MinWidth="348" MinHeight="420">
+    <Grid Margin="5,15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <Style TargetType="StackPanel">
+                <Setter Property="Margin" Value="10, 10, 10, 10" />
+            </Style>
+        </Grid.Resources>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label Content="Storage Path" Height="30" VerticalAlignment="Center" />
+            <Button Content="{Binding Settings.SaveLocation, Mode=TwoWay}" Command="{Binding BrowseSaveLocationCommand}" Width="200" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <CheckBox IsChecked="{Binding Settings.KeepVideo}" Content="Keep videos file after uploading" />
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label Content="Hotkey (Stop)" VerticalAlignment="Center" />
+            <Grid HorizontalAlignment="Left">
+                <StackPanel Height="30" Orientation="Horizontal">
+                    <ComboBox x:Name="Modifier1" VerticalAlignment="Center" Width="60" ItemsSource="{Binding Settings.HotkeyList}" DisplayMemberPath="Name" SelectedValue="{Binding Settings.ModifierKey1}" SelectedValuePath="Name">
+                        <ComboBox.ItemContainerStyle>
+                            <Style TargetType="{x:Type ComboBoxItem}">
+                                <Setter Property="IsEnabled" Value="{Binding Enabled}" />
+                            </Style>
+                        </ComboBox.ItemContainerStyle>
+                    </ComboBox>
+                    <Separator Width="10"/>
+                    <ComboBox x:Name="Modifier2" VerticalAlignment="Center" Width="60" ItemsSource="{Binding Settings.HotkeyList}" DisplayMemberPath="Name" SelectedValue="{Binding Settings.ModifierKey2}" SelectedValuePath="Name">
+                        <ComboBox.ItemContainerStyle>
+                            <Style TargetType="{x:Type ComboBoxItem}">
+                                <Setter Property="IsEnabled" Value="{Binding Enabled}" />
+                            </Style>
+                        </ComboBox.ItemContainerStyle>
+                    </ComboBox>
+                    <Separator Width="10"/>
+                    <TextBox x:Name="Hotkey" VerticalAlignment="Center" Width="60" Text="{Binding Settings.Key}" HorizontalContentAlignment="Center" KeyDown="hotkey_KeyDown" />
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label Content="Recorder" />
+            <ComboBox Width="185" ItemsSource="{Binding Settings.RecorderList}" DisplayMemberPath="Name" SelectedValuePath="ClassName" SelectedValue="{Binding Settings.Recorder}" VerticalContentAlignment="Center">
+                <ComboBox.ItemContainerStyle>
+                    <Style TargetType="{x:Type ComboBoxItem}">
+                        <Setter Property="IsEnabled" Value="{Binding Enabled}" />
+                    </Style>
+                </ComboBox.ItemContainerStyle>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label Content="Countdown" VerticalAlignment="Center" />
+            <Slider Maximum="10" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" Width="180" Value="{Binding Settings.CountdownSecond, Mode=TwoWay}" />
+            <TextBox Text="{Binding Settings.CountdownSecond, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="32" TextAlignment="Right" />
+        </StackPanel>
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Save" Command="{Binding SaveSettingsCommand}" VerticalAlignment="Center" Width="100" Height="28" />
+        </StackPanel>
+    </Grid>
+</Window>

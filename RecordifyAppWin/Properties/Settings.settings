@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RecordifyAppWin.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SaveLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Temp</Value>
+    </Setting>
+    <Setting Name="KeepVideo" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DefaultRecorder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FFMPEGRecorder</Value>
+    </Setting>
+    <Setting Name="StartStopHotkey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CTRL_+_ALT_+_F9</Value>
+    </Setting>
+    <Setting Name="CountdownSecond" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

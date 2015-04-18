@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecordifyAppWin", "RecordifyAppWin\RecordifyAppWin.csproj", "{03A5C63C-750C-442E-96B3-A9A1ABDF0826}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Referenced Files", "Referenced Files", "{F0494248-EE99-4EF5-9AF4-B31BE113B35D}"
+	ProjectSection(SolutionItems) = preProject
+		Referenced Files\Hardcodet.Wpf.TaskbarNotification.dll = Referenced Files\Hardcodet.Wpf.TaskbarNotification.dll
+		Referenced Files\Ookii.Dialogs.Wpf.dll = Referenced Files\Ookii.Dialogs.Wpf.dll
+		Referenced Files\System.Windows.Interactivity.dll = Referenced Files\System.Windows.Interactivity.dll
+		Referenced Files\Vlc.DotNet.Core.dll = Referenced Files\Vlc.DotNet.Core.dll
+		Referenced Files\Vlc.DotNet.Core.Interops.dll = Referenced Files\Vlc.DotNet.Core.Interops.dll
+		Referenced Files\Vlc.DotNet.Wpf.dll = Referenced Files\Vlc.DotNet.Wpf.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03A5C63C-750C-442E-96B3-A9A1ABDF0826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03A5C63C-750C-442E-96B3-A9A1ABDF0826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03A5C63C-750C-442E-96B3-A9A1ABDF0826}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{03A5C63C-750C-442E-96B3-A9A1ABDF0826}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{03A5C63C-750C-442E-96B3-A9A1ABDF0826}.Debug|x64.ActiveCfg = Debug|x64
+		{03A5C63C-750C-442E-96B3-A9A1ABDF0826}.Debug|x64.Build.0 = Debug|x64
+		{03A5C63C-750C-442E-96B3-A9A1ABDF0826}.Debug|x86.ActiveCfg = Debug|x86
+		{03A5C63C-750C-442E-96B3-A9A1ABDF0826}.Debug|x86.Build.0 = Debug|x86
+		{03A5C63C-750C-442E-96B3-A9A1ABDF0826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03A5C63C-750C-442E-96B3-A9A1ABDF0826}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03A5C63C-750C-442E-96B3-A9A1ABDF0826}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{03A5C63C-750C-442E-96B3-A9A1ABDF0826}.Release|Mixed Platforms.Build.0 = Release|x86
+		{03A5C63C-750C-442E-96B3-A9A1ABDF0826}.Release|x64.ActiveCfg = Release|x64
+		{03A5C63C-750C-442E-96B3-A9A1ABDF0826}.Release|x64.Build.0 = Release|x64
+		{03A5C63C-750C-442E-96B3-A9A1ABDF0826}.Release|x86.ActiveCfg = Release|x86
+		{03A5C63C-750C-442E-96B3-A9A1ABDF0826}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		BuildVersion_AssemblyInfoFilename = Common\AssemblyInfoCommon.cs
+		BuildVersion_UseGlobalSettings = False
+		BuildVersion_BuildVersioningStyle = None.None.None.None
+		BuildVersion_UpdateFileVersion = False
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Vlc.DotNet.vsmdi
+	EndGlobalSection
+EndGlobal
